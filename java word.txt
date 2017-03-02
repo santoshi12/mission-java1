@@ -1,0 +1,360 @@
+1)PRINTING A PATTERN IN JAVA
+
+class pattern
+{
+public static void main(String args[])
+{
+    int i,j;
+for(i=1;i<=7;i++)
+{
+for(j=1;j<=i;j++)
+System.out.print(j);
+System.out.println();
+}
+for(i=6;i>=1;i--)
+{
+for(j=1;j<=i;j++)
+System.out.print(j);
+System.out.println();
+}
+}
+}
+
+
+
+
+
+
+
+
+OUTPUT:
+
+1
+12
+123
+1234
+12345
+123456
+1234567
+123456
+12345
+1234
+123
+12
+1
+
+
+
+
+
+2) PROGRAM TO PRINT REVERSE OF A NUMBER
+
+
+import java.util.Scanner;
+class ReverseNumber
+{
+   public static void main(String args[])
+   {
+      int n, reverse = 0;
+      System.out.println("Enter the number to reverse");
+      Scanner in = new Scanner(System.in);
+      n = in.nextInt();
+      while( n != 0 )
+      {
+          reverse = reverse * 10;
+          reverse = reverse + n%10;
+          n = n/10;
+      }
+      System.out.println("Reverse of entered number is "+reverse);
+   }
+}
+
+OUTPUT:
+Enter the number to reverse 69
+Reverse of entered number is 96
+	
+
+4)PROGRAM TO PRINT SUM OF DIGITS OF A GIVEN NUMBER
+
+
+ import java.util.Scanner;
+class Sum
+{
+public static void main(String  args[])
+{
+int num,x=0;
+System.out.println("Enter the number:");
+Scanner s=new Scanner(System.in);
+num=s.nextInt();
+while(num>0)
+{
+x=x+num%10;
+num=num/10;
+}
+System.out.println("Sum:"+x);
+}
+}
+OUTPUT:
+Enter the number:7689
+Sum:30
+
+
+
+6)PROGRAM TO CHECK WHETHER A GIVEN NUMBER IS PRIME
+
+
+ import java.util.Scanner;
+class  PrimeExample
+{
+public static void main(String args[])
+{
+int num,i,factcount=0;
+System.out.println("Enter the num you want to check:");
+Scanner s=new Scanner(System.in);
+num=s.nextInt();
+for(i=1;i<=num;i++)
+{
+if(num%i==0)
+{
+factcount++;
+}
+}
+if(factcount==2)
+System.out.println("Given number is a prime:");
+else
+System.out.println("Given number is not prime:");
+}
+}
+
+OUTPUT:
+Enter the num you want to check:87
+Given number is not prime:
+
+
+10) PROGRAM TO PRINT MAXIMUM OF TWO NUMBERS
+
+
+import java.util.Scanner;
+class Max
+{
+private int a;
+private int b;
+public int maximum(int a,int b)
+{
+this.a=a;
+this.b=b;
+return a>b?a:b;
+}}
+
+class MaxTest
+{
+public static void main(String args[])
+{
+int Num1,Num2;
+Max m=new Max();
+System.out.println("Enter two numbers:");
+Scanner s=new Scanner(System.in);
+Num1=s.nextInt();
+Num2=s.nextInt();
+int result=m.maximum(Num1,Num2);
+System.out.println("Maximum : "+result);
+}
+}
+
+OUTPUT:
+Enter two numbers:98 90
+Maximum : 98
+
+
+
+8)PROGRAM TO SWAP TWO TWO NUMBERS WITHOUT USING A THIRD VARIABLE
+
+
+
+import java.util.Scanner;
+class Swap{
+private int a;private int b;
+public  Swap(int a,int b)
+{
+this.a=a+b;
+this.b=this.a-b;
+this.a=this.a-this.b;
+}
+public int returnswap1()
+{
+return this.a;
+}
+public int returnswap2()
+{
+return this.b;
+}}
+class SwapTest
+{
+public static void main(String args[])
+{
+int x,y,c,d;
+System.out.println("Enter two numbers:");
+Scanner s=new Scanner(System.in);
+x=s.nextInt();
+y=s.nextInt();
+Swap s1=new Swap(x,y);
+c=s1.returnswap1();
+d=s1.returnswap2();
+System.out.println("Value of a:"+c);
+System.out.println("Value of b:"+d);
+}
+}
+
+OUTPUT:
+Enter two numbers:25 67
+Value of a:67
+Value of b:25
+
+
+
+9) PROGRAM TO PRINT DAY OF WEEKNAME USING SWITCH CASE
+
+
+class WeekDays
+{
+    public static void main(String args[])
+    {
+        int day = 2;
+        
+        switch(day)
+        {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday");
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            default:
+                System.out.println("Weekend");
+                break;
+        }
+    }
+}
+
+OUTPUT:
+Tuesday
+
+
+5)pROGRAMT O PRINT FIBANOCCI SERIES
+
+ import java.util.Scanner;
+public class Fibonacci 
+{
+    public static void main(String[] args) 
+    {
+        int n, a = 0, b = 0, c = 1;
+        Scanner s = new Scanner(System.in);
+        System.out.print("Enter value of n:");
+        n = s.nextInt();
+        System.out.print("Fibonacci Series:");
+        for(int i = 1; i <= n; i++)
+        {
+            a = b;
+            b = c;
+            c = a + b;
+            System.out.print(a+" ");
+        }
+    }
+}
+
+OUTPUT:
+Enter value of n:6 Fibonacci Series:0 1 1 2 3 5
+
+
+7) PROGRAM WITH OVERIDING AND OVERLOADING USING POLYMORPHISM
+
+class Sum
+{
+void add(int a, int b)
+{
+ System.out.println("Sum of two="+(a+b));
+}
+void add(int a, int b,int c)
+{
+            System.out.println("Sum of three="+(a+b+c));
+}
+void cal(double x)
+{
+            System.out.println("square value="+(x*x));
+}
+}
+class B extends A
+{
+void cal(double x)
+{
+            System.out.println("square root="+Math.sqrt(x));
+}
+}
+class Polymorphism
+{
+      public static void main(String args[])
+      {
+            A a=new A();
+           a.cal(15); 
+          a.add(10,15);
+         a.add(10,20,30); 
+   }
+ }
+
+OUTPUT:
+square value=225.0
+Sum of two=25
+Sum of three=60
+
+
+3)PROGRAM SHOWING MULTIPLE INHERITANCE
+
+
+interface LivingThings
+{
+abstract void Sleep();
+abstract void Eat();
+}
+interface Animals
+{
+abstract void MakeNoise();
+}
+class Dogs implements LivingThings,Animals
+{
+public void Sleep()
+{
+System.out.println("Sleeps for 9 hours");
+}
+public void Eat()
+{
+System.out.println("We eat just like all other living things:");
+}
+public void MakeNoise()
+{
+System.out.println("Bark Bark:");
+}
+}
+class InterfaceTest
+{
+public static void main(String args[])
+{
+Dogs d=new Dogs();
+d.Sleep();
+d.Eat();
+d.MakeNoise();
+}}
+
+OUTPUT:
+Sleeps for 9 hours
+We eat just like all other living things:
+Bark Bark:
+
